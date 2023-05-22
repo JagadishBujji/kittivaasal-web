@@ -524,6 +524,10 @@ main > div > a:hover {
 
 /* Our partner */
 /* Industy */
+.HealthCare{
+  border: 2px solid #fff;
+  padding: 10px;
+}
 .position-relative {
   position: relative !important;
 }
@@ -551,7 +555,7 @@ main > div > a:hover {
 }
 
 .bg-secondary {
-  background-color: #181818 !important;
+  background-color: #005baa !important;
 }
 
 a.bg-secondary:hover,
