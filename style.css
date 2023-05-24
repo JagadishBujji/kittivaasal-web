@@ -336,7 +336,7 @@ main > div > a:hover {
   background-color: var(--color-bg);
 } */
 
-.Partners{
+.Partners {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -517,14 +517,14 @@ main > div > a:hover {
   background: #00ca4a;
 }
 
-.partner-desc{
+.partner-desc {
   font-size: 28px;
   font-weight: 700;
 }
 
 /* Our partner */
 /* Industy */
-.HealthCare{
+.HealthCare {
   border: 2px solid #fff;
   padding: 10px;
 }
@@ -608,6 +608,215 @@ button.bg-secondary:focus {
 }
 
 /* Industy */
+
+/* our Services */
+
+.Card {
+  background: #ffffff17;
+
+  border-radius: 10px;
+}
+
+.servies-icon {
+  max-width: 26%;
+}
+
+.services-para1 {
+  font-size: 20px;
+  color: #fff;
+  font-weight: bolder;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-top: 20px;
+}
+
+/* @property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+} */
+
+:root {
+  --card-height: 50vh;
+  --card-width: calc(var(--card-height) / 0.9);
+}
+
+/* body {
+  min-height: 100vh;
+  background: #212534;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  box-sizing: border-box;
+} */
+
+.links-services:hover {
+  text-decoration: none;
+}
+
+.Card {
+  /* background: #191c29; */
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  border-radius: 40px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+
+  cursor: pointer;
+
+  margin: auto;
+  flex-direction: column;
+}
+
+.Card:hover {
+  color: rgb(88 199 250 / 100%);
+  transition: color 1s;
+  text-decoration: none;
+  border: 5px solid #00ca4a;
+}
+.Card:hover:before,
+.card:hover:after {
+  animation: none;
+  opacity: 0;
+}
+
+.Card::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  /* background-image: linear-gradient(
+    var(--rotate),
+    #005baa,
+    #00ca4a 43%,
+    #005baa
+  ); */
+  position: absolute;
+  z-index: -1;
+  top: -1%;
+  left: -2%;
+  animation: spin 2.5s linear infinite;
+}
+
+.Card::after {
+  position: absolute;
+  content: "";
+  top: calc(var(--card-height) / 20);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--card-height) / 6));
+  /* background-image: linear-gradient(var(--rotate), #00ca4a 26%, #005baa 30%); */
+  opacity: 1;
+  transition: opacity 0.5s;
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+
+/* our Services */
+
+/* testimonial */
+
+/* .Testimonial{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+} */
+
+#carouselExampleIndicators {
+  border: 1px solid #000000;
+  border-radius: 20px;
+  padding: 60px;
+  margin-bottom: 90px;
+  margin-top: 90px;
+  background: #ffffff17;
+}
+
+.cir {
+  width: 15px;
+  height: 15px;
+  background: #00ca4a;
+  border: 1px solid var(--text-primary);
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.square {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.fa-star {
+  color: #00ca4a;
+  margin-right: 5px;
+}
+
+.say {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+.founder {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+.circle,
+.star {
+  margin-left: 2px;
+  margin-bottom: 25px;
+}
+
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  background: #00ca4a23;
+  border-radius: 50%;
+}
+
+.carousel-indicators .active {
+  background: #00ca4a;
+}
+
+.image-square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-chevron-left,
+.fa-chevron-right {
+  color: var(--text-primary);
+  font-size: 30px;
+}
+/* testimonial */
 
 /* footer */
 
