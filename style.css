@@ -38,13 +38,6 @@ body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
-}
-
 main {
   position: relative;
   width: calc(min(90rem, 90%));
@@ -312,6 +305,27 @@ main > div > a:hover {
   }
 }
 
+/* Mobile Styles */
+@media screen and (max-width: 767px) {
+  .why-choose {
+    font-size: 1.5rem;
+  }
+}
+
+/* Tablet Styles */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .why-choose {
+    font-size: 1.8rem;
+  }
+}
+
+/* Desktop Styles */
+@media screen and (min-width: 1024px) {
+  .why-choose {
+    font-size: 2rem;
+  }
+}
+
 /* Our partner */
 
 :root {
@@ -549,12 +563,6 @@ main > div > a:hover {
   background: #fff;
 }
 
-/* .our-industry {
-  font-size: 32px;
-  font-weight: bolder;
-  color: #005baa;
-} */
-
 .HealthCare {
   border: 2px solid #fff;
   padding: 10px;
@@ -696,9 +704,9 @@ button.bg-secondary:focus {
 
 /* our Services */
 
-/* .services {
-  background: #eee8aa;
-} */
+.services {
+  background: #5b5b5b;
+}
 
 .Card {
   background: #ffffff17;
@@ -819,9 +827,59 @@ button.bg-secondary:focus {
   }
 }
 
+/* Existing styles */
+
+/* ... */
+
+/* Mobile Styles */
+
+@media (max-width: 767px) {
+  .Card {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    margin: 0 auto 20px;
+  }
+
+  .Card::before,
+  .Card::after {
+    display: none;
+  }
+
+  .servies-icon {
+    max-width: 50%;
+  }
+
+  .services-para1 {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}
+
+/* Laptop and Larger System Styles */
+
+@media (min-width: 768px) {
+  .Card {
+    width: var(--card-width);
+    height: var(--card-height);
+    margin: auto;
+  }
+
+  .servies-icon {
+    max-width: 26%;
+  }
+
+  .services-para1 {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+}
+
 /* our Services */
 
 /* insights */
+
+/* Default styles */
 
 .card-carousel {
   position: relative;
@@ -837,22 +895,15 @@ button.bg-secondary:focus {
 
 .card {
   flex: 0 0 300px;
-  margin-right: 40px;
+  margin-right: 70px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
   border: none;
-  /* background: url(images/); */
 }
 
-/* .news {
-  background: url(images/Banner-for-The-Data-Revolution-Whitepaper-scaled.jpg);
-  background-size: cover;
-  background-position: center;
-} */
-
-div .card.active {
+.card.active {
   transform: scale(1.1);
 }
 
@@ -860,20 +911,10 @@ div .card.active {
   width: 100%;
   border-radius: 10px 10px 0 0;
   height: 10rem;
-
-  /* transform: scale(1);
-
-  transition: all 0.5s ease-in-out; */
-}
-.card-img:hover {
-  /* -webkit-transform: scale(1.1);
-  -o-transform: scale(1.1);
-  transform: scale(1.1); */
 }
 
 .cards-insights:hover {
   text-decoration: none;
-  /* color: #000; */
 }
 
 .card-content {
@@ -910,7 +951,6 @@ div .card.active {
   background-color: #009cb3;
   padding-top: 80px;
   padding-bottom: 100px;
-  /* margin-top: 30px; */
   margin-bottom: 50px;
 }
 
@@ -931,7 +971,6 @@ div .card.active {
   font-weight: 500;
   background: #005baa;
   border-radius: 3.125rem;
-  /* transition: 0.3s ease-in-out; */
   padding: 15px;
 }
 
@@ -947,6 +986,47 @@ div .card.active {
 
 .insights-para {
   margin-bottom: 30px;
+}
+
+/* Media queries */
+
+/* Mobile devices */
+@media only screen and (max-width: 767px) {
+  .card-carousel {
+    padding: 20px;
+  }
+
+  .card {
+    flex: 0 0 calc(100% - 20px);
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+/* Laptops */
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .card-carousel {
+    padding: 30px;
+  }
+
+  .card {
+    flex: 0 0 calc(50% - 20px);
+    /* margin-right: 20px; */
+    margin-bottom: 20px;
+  }
+}
+
+/* Desktop systems */
+@media only screen and (min-width: 1200px) {
+  .card-carousel {
+    padding: 40px;
+  }
+
+  .card {
+    flex: 0 0 calc(33.33% - -40px);
+    /* margin-right: 20px; */
+    margin-bottom: 20px;
+  }
 }
 
 /* insights */
@@ -1028,27 +1108,69 @@ div .card.active {
   color: var(--text-primary);
   font-size: 30px;
 }
+
+/* Media query for mobile screens */
+@media only screen and (max-width: 767px) {
+  #carouselExampleIndicators {
+    padding: 30px;
+    margin-bottom: 60px;
+    margin-top: 60px;
+  }
+
+  .square {
+    width: 150px;
+    height: 150px;
+  }
+
+  .say {
+    font-size: 18px;
+  }
+
+  .founder {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  #carouselExampleIndicators {
+    padding: 80px;
+    margin-bottom: 120px;
+    margin-top: 120px;
+  }
+
+  .square {
+    width: 250px;
+    height: 250px;
+  }
+
+  .say {
+    font-size: 30px;
+  }
+
+  .founder {
+    font-size: 24px;
+  }
+}
 /* testimonial */
 
 /* contact form */
 .contact-overall {
-  background-color: #717171;
+  background-color: #2d76bb;
   padding: 40px;
 }
+
 .contact-form {
   position: relative;
   width: 100%;
-  /* margin: 0 auto; */
   padding: 20px;
   border-radius: 10px;
-
-  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); */
 }
 
 .contact-head {
   font-size: 40px;
   font-weight: 600;
   color: #00ca4a;
+  text-align: center;
 }
 
 .contact-form h2 {
@@ -1063,6 +1185,7 @@ div .card.active {
   background-color: #ccc;
   border: none;
 }
+
 .form-control:focus {
   background-color: #fff;
   border: 1px solid #00ca4a;
@@ -1075,7 +1198,6 @@ label {
   color: #fff;
   font-size: 20px;
   font-weight: 500;
-  /* letter-spacing: 2px; */
 }
 
 input,
@@ -1087,7 +1209,6 @@ textarea {
 }
 
 textarea {
-  width: 100%;
   height: 10rem;
   background: #ccc;
 }
@@ -1104,8 +1225,6 @@ textarea:focus-visible {
 }
 
 .btn-primary {
-  /* display: block;
-  width: 100%; */
   padding: 10px;
   background-color: #005baa;
   color: #fff;
@@ -1116,6 +1235,60 @@ textarea:focus-visible {
   cursor: pointer;
 }
 
+/* Responsive Styling */
+
+@media (max-width: 991.98px) {
+  .contact-overall {
+    padding: 20px;
+  }
+
+  .contact-head {
+    font-size: 30px;
+  }
+
+  .form-control,
+  textarea {
+    font-size: 16px;
+  }
+
+  .btn-primary {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .contact-head {
+    font-size: 24px;
+  }
+
+  .form-control,
+  textarea {
+    font-size: 14px;
+  }
+
+  .btn-primary {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .contact-overall {
+    padding: 30px;
+  }
+
+  .contact-head {
+    font-size: 36px;
+  }
+
+  .form-control,
+  textarea {
+    font-size: 18px;
+  }
+
+  .btn-primary {
+    font-size: 18px;
+  }
+}
 /* Animation */
 
 /* .contact-form::before {
