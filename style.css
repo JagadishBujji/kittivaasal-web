@@ -14,6 +14,8 @@ body {
   );
   /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
 }
+
+/* navbar */
 .kitti-logo {
   width: 100px;
   height: auto;
@@ -37,6 +39,40 @@ body {
   font-weight: 900;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
+
+.dropdown {
+  position: relative;
+  display: contents;
+}
+
+.dropdown-toggle {
+  /* Your styles for the dropdown toggle button */
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.dropdown-item {
+  color: #fff;
+  margin: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  border: none;
+  border-bottom: 1px solid #000;
+  background: #0d2f51;
+  display: none;
+  padding: 40px 0;
+}
+
+/* navbar */
 
 main {
   position: relative;
