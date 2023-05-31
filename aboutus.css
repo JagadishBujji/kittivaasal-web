@@ -7,6 +7,27 @@ html {
   box-sizing: inherit;
 }
 
+@font-face {
+  font-family: "Sharp Sans Extrabold";
+  src: url(sharp-sans-cufonfonts/Sharp\ Sans\ Bold\ Italic.otf);
+}
+@font-face {
+  font-family: "Sharp Sans Thin";
+  src: url(sharp-sans-cufonfonts/Sharp\ Sans\ Thin.otf);
+}
+@font-face {
+  font-family: "Sharp Sans ExtraBold";
+  src: url(sharp-sans-cufonfonts/Sharp\ Sans\ Extrabold.otf);
+}
+@font-face {
+  font-family: "Sharp Sans Semibold";
+  src: url(sharp-sans-cufonfonts/Sharp\ Sans\ Semibold.otf);
+}
+@font-face {
+  font-family: "Sharp Sans Medium";
+  src: url(sharp-sans-cufonfonts/Sharp\ Sans\ Medium.otf);
+}
+
 /* navbar */
 
 .kitti-logo {
@@ -131,6 +152,119 @@ html {
 }
 
 /* banner */
+/* banner2 */
+.cover,
+.bg {
+  height: 100%;
+  width: 100%;
+}
+
+.bg {
+  background: linear-gradient(rgba(42, 58, 63, 0.8), rgba(42, 58, 63, 0.8)),
+    url("images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 10%;
+  border-radius: 0 0 60% 60%/0 0 100% 100%;
+  /* transform: scaleX(1.1); */
+  /* padding-top: 3.47em;
+  padding-bottom: 3.47em; */
+  font-family: "Sharp Sans Extrabold";
+}
+
+.lead1 {
+  font-size: 18px;
+}
+
+.cover {
+  color: #f6f6f6;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+.landing-page--message {
+  text-align: center;
+  /* padding: 10%; */
+}
+
+.landing-page--message h1 {
+  font-size: 40px;
+  letter-spacing: -1px;
+}
+
+@media only screen and (min-width: 768px) {
+  .landing-page--message h1 {
+    font-size: 56px;
+    letter-spacing: 1px;
+  }
+}
+
+.landing-page--message .btn-outline-danger {
+  color: white;
+  border-width: 5px;
+}
+
+.landing-page--message a:link,
+.landing-page--message a:hover,
+.landing-page--message a:visited,
+.landing-page--message a:active {
+  color: #f6f6f6;
+}
+
+.landing-page--message a:hover {
+  text-decoration: none;
+}
+
+/* SERVICES PAGE */
+
+.dev {
+  border-top: 5px solid #ec5552;
+  border-bottom: 5px solid #ec5552;
+  border-left: 10px solid #ec5552;
+  border-right: 10px solid #ec5552;
+  padding: 5%;
+  width: inherit;
+}
+
+.dev h1 {
+  font-weight: lighter;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.dev h1 strong {
+  color: #ec5552;
+  font-weight: 700;
+}
+
+#first-page {
+  border-top: 10px solid #ec5552;
+}
+
+button.btn.btn-lg.btn-white {
+  border: 5px solid #f6f6f6;
+  background-color: #ec5552;
+  color: #f6f6f6;
+}
+
+button.btn.btn-lg.btn-white:hover {
+  background: #f6f6f6;
+  color: #ec5552;
+  transition: all 0.2s ease-in;
+}
+
+button.btn.btn-lg.btn-white:focus {
+  box-shadow: none;
+}
+
+/* 
+.curve-bottom{
+  border-radius: 0 0 60% 60%/0 0 100% 100%;
+} */
+
+/* banner2 */
 
 /* about us */
 
@@ -140,6 +274,7 @@ html {
   font-size: 2rem;
   color: #00ca4a;
   font-weight: 700;
+  
 }
 
 .tick {
@@ -184,6 +319,31 @@ html {
   animation: action 1s infinite alternate;
 }
 
+.addon {
+  width: 70%;
+  height: 100%;
+  position: absolute;
+  right: -30px;
+  border-radius: 10px;
+  border: 15px solid #00ca4a;
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 767px) {
+  .addon {
+    /* width: 100%; */
+    right: 0;
+  }
+}
+
+/* Media query for larger screens */
+@media only screen and (min-width: 768px) {
+  .addon {
+    width: 50%;
+    right: -50px;
+  }
+}
+
 @keyframes action {
   0% {
     transform: translateY(0);
@@ -197,6 +357,7 @@ html {
 @media screen and (max-width: 767px) {
   .why-choose {
     font-size: 1.5rem;
+    font-family: "Sharp Sans Semibold";
   }
 }
 
@@ -204,6 +365,7 @@ html {
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .why-choose {
     font-size: 1.8rem;
+    font-family: "Sharp Sans Semibold";
   }
 }
 
@@ -211,9 +373,125 @@ html {
 @media screen and (min-width: 1024px) {
   .why-choose {
     font-size: 2rem;
+    font-family: "Sharp Sans Semibold";
   }
 }
 
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-left {
+  animation: fadeLeft 1s ease-in-out;
+}
+
+.fade-right {
+  animation: fadeRight 1s ease-in-out;
+}
+
+/* carrer */
+
+.carrer {
+  position: relative;
+  height: 600px; /* Adjust the height as needed */
+  background-image: #ccc;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  /* background-attachment: fixed; */
+}
+.carrer-content {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+.carrer-content h1 {
+  font-size: 46px; /* Adjust the font size as needed */
+  font-weight: 700;
+}
+.carrer-content p {
+  font-size: 36px; /* Adjust the font size as needed */
+  font-weight: 700;
+  margin-bottom: 0;
+  font-family: "Sharp Sans Semibold";
+}
+
+.career-join {
+  background: #005baa;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 800;
+  padding: 20px;
+  border-radius: 50px;
+}
+
+.career-join:hover {
+  background: #005baa;
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  .carrer {
+    height: 350px; /* Adjust the height for mobile screens */
+    background: #000;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carrer-content h1 {
+    font-size: 30px; /* Adjust the font size for mobile screens */
+  }
+}
+
+/* border-radius: 50% 50% 0 0/100% 100% 0 0;  top */
+/* border-radius: 0 0 60% 60%/0 0 100% 100%;  bottom */
+
+@media (min-width: 1200px) {
+  .carrer {
+    height: 130px; /* Adjust the height for larger screens */
+    background: #000;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carrer-content h1 {
+    font-size: 36px; /* Adjust the font size for larger screens */
+  }
+}
+/* carrer */
 
 /* contact form */
 .contact-overall {
@@ -534,16 +812,16 @@ ul {
   color: #878787;
 }
 
+.carrer-about {
+  background: #ffffff17;
+  padding: 20px;
+  border-radius: 10px;
+}
+
 .copy {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.carrer {
-  background: #ffffff17;
-  padding: 20px;
-  border-radius: 10px;
 }
 
 .hiring {

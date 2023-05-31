@@ -69,7 +69,7 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light ">
+    <nav class="navbar navbar-expand-lg navbar-light">
       <a class="navbar-brand" href="#">
         <img src="/images/kitti-logo.png" alt="" class="kitti-logo" />
       </a>
@@ -194,17 +194,46 @@
 
     <!-- banner -->
 
-    <div class="banner">
+    <!-- <div class="banner">
       <div class="banner-content">
         <h1>About us</h1>
         <h5>Lorem Ipsum Whatever, Bears.</h5>
       </div>
-    </div>
+    </div> -->
 
     <!-- banner -->
+    <!-- banner2 -->
+    <div class="bg container-fluid" id="top">
+      <div class="cover row">
+        <div class="landing-page--message col-md-12">
+          <h1>
+            "Coming together is a beginning keeping together is progress working
+            together is success" <br />-Henry Ford
+          </h1>
+          <!-- <p class="lead1">
+            A Wordpress and Front-end Developer based out of Salt Lake City.
+          </p> -->
+          <div class="curve-bottom"></div>
+          <!-- <a href="#hire" class="btn btn-lg btn-outline-danger"
+            >Yep! I'm Available!</a
+          > -->
+
+          <!-- <a href="#services">
+            <h2 class="hidden-sm-down">Here is what I do</h2>
+            <i
+              class="fa fa-chevron-down fa-2x hidden-sm-down mb-5"
+              aria-hidden="true"
+            ></i>
+          </a> -->
+        </div>
+        <!-- <div class="col-md-6"></div> -->
+      </div>
+    </div>
+
+    <!-- banner2 -->
 
     <!-- About our company -->
-    <div class="container-fluid py-5 our-company">
+    <div class="container-fluid py-5 our-company" id="our-company-section1">
       <div class="container">
         <div class="row">
           <div class="col-lg-7 mt-5 py-5 pr-lg-5">
@@ -250,10 +279,11 @@
               class="d-flex flex-column align-items-center justify-content-center h-100 overflow-hidden"
             >
               <!-- <img class="h-100" src="img/feature.jpg" alt="" /> -->
+              <div class="addon"></div>
               <img
                 src="images/about.jpg"
                 alt="why-choose-us"
-                style="border-radius: 10px; max-width: 60%"
+                style="border-radius: 10px; max-width: 60%; z-index: 1"
               />
             </div>
           </div>
@@ -261,6 +291,16 @@
       </div>
     </div>
     <!-- About our company -->
+    <div class="carrer">
+      <div class="carrer-content row">
+        <div class="col-md-7">
+          <p>If opportunity doesn't knock, build a door.</p>
+        </div>
+        <div class="col-md-5">
+          <a href="" class="career-join">Join with us</a>
+        </div>
+      </div>
+    </div>
     <!-- contact form -->
 
     <div class="container-fluid contact-overall">
@@ -461,7 +501,7 @@
             </div>
             <div class="col-xl-3 col-lg-3 col-md-4 mb-50">
               <div class="footer-widget">
-                <div class="carrer">
+                <div class="carrer-about">
                   <p class="hiring">
                     We’re hiring! Learn about careers at Kittivaasal
                   </p>
@@ -741,6 +781,74 @@
         };
       };
       // our team
+      // fadeup for about us
+      window.addEventListener("scroll", function () {
+        var section = document.getElementById("our-company-section1");
+        var sectionTop = section.getBoundingClientRect().top;
+
+        var isVisible = sectionTop - window.innerHeight < 0;
+        if (isVisible) {
+          section.classList.add("fade-up");
+        } else {
+          section.classList.remove("fade-up");
+        }
+      });
+
+      window.addEventListener("scroll", function () {
+        var leftColumn = document.getElementById("left-column");
+        var rightColumn = document.getElementById("right-column");
+
+        var leftColumnTop = leftColumn.getBoundingClientRect().top;
+        var rightColumnTop = rightColumn.getBoundingClientRect().top;
+
+        var isVisibleLeft = leftColumnTop - window.innerHeight < 0;
+        var isVisibleRight = rightColumnTop - window.innerHeight < 0;
+
+        if (isVisibleLeft) {
+          leftColumn.classList.add("fade-left");
+        } else {
+          leftColumn.classList.remove("fade-left");
+        }
+
+        if (isVisibleRight) {
+          rightColumn.classList.add("fade-right");
+        } else {
+          rightColumn.classList.remove("fade-right");
+        }
+      });
+      // fadeup for about us
+      // about us
+      $(function () {
+        // SCROLL-TO ANIMATION
+        $('a[href*="#"]:not([href="#"])').click(function () {
+          if (
+            location.pathname.replace(/^\//, "") ==
+              this.pathname.replace(/^\//, "") &&
+            location.hostname == this.hostname
+          ) {
+            var target = $(this.hash);
+            target = target.length
+              ? target
+              : $("[name=" + this.hash.slice(1) + "]");
+            if (target.length) {
+              $("html, body").animate(
+                {
+                  scrollTop: target.offset().top,
+                },
+                1000
+              );
+              return false;
+            }
+          }
+        });
+
+        // FIXED NAV AFTER SCROLL
+        // document.onscroll = function () {
+        //   if ($(window).scrollTop() > $(".cover").height()) {
+        //     $("nav.navbar").removeClass("sticky-top").addClass("fixed-top");
+        //   }
+        // };
+      });
     </script>
   </body>
 </html>

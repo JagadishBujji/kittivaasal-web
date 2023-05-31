@@ -199,7 +199,7 @@
 
     <!-- banner -->
     <main class="main-banner">
-      <div>
+      <div class="fade-left">
         <span>discover</span>
         <h1>Lead Your Business Fascinating</h1>
         <hr />
@@ -209,7 +209,7 @@
         </p>
         <a href="#">join with us</a>
       </div>
-      <div class="swiper">
+      <div class="swiper fade-right">
         <div class="swiper-wrapper">
           <div
             class="swiper-slide swiper-slide--one"
@@ -317,10 +317,10 @@
     </main>
     <!-- banner -->
     <!-- About our company -->
-    <div class="container-fluid py-5 our-company">
+    <div class="container-fluid py-5 our-company" id="our-company-section">
       <div class="container">
         <div class="row">
-          <div class="col-lg-7 mt-5 py-5 pr-lg-5">
+          <div class="col-lg-7 mt-5 py-5 pr-lg-5" id="left-column">
             <div>
               <h6 class="why-choose text-uppercase mb-3">About Our Company</h6>
               <h1 class="mb-4 section-title">
@@ -358,15 +358,24 @@
               > -->
             </div>
           </div>
-          <div class="col-lg-5">
+          <div class="col-lg-5" id="right-column">
             <div
               class="d-flex flex-column align-items-center justify-content-center h-100 overflow-hidden"
             >
               <!-- <img class="h-100" src="img/feature.jpg" alt="" /> -->
+              <!-- <div class="about-back"></div> -->
               <img
                 src="images/about.jpg"
                 alt="why-choose-us"
-                style="border-radius: 10px; max-width: 60%"
+                style="
+                  border-radius: 10px;
+                  max-width: 60%;
+                  z-index: 1;
+                  box-shadow: #00ca4a 5px 5px, #00ca4a8a 10px 10px,
+                    #2ef03833 15px 15px,
+                    rgba(21, 241, 94, 0.126) 20px 20px,
+                    #07ff661c 25px 25px;
+                "
               />
             </div>
           </div>
@@ -510,7 +519,7 @@
               <div class="card-home d-flex align-items-end">
                 <img
                   class="img-industry"
-                  src="/images/Healthcare.png"
+                  src="/images/health.png"
                   alt="hall"
                 />
                 <article class="content d-flex align-items-end">
@@ -522,7 +531,7 @@
           <div class="col-lg-4 col-md-6 col-6 p-0 portfolio-item second">
             <a href="" class="industry-link">
               <div class="card-home d-flex align-items-end">
-                <img class="img-industry" src="/images/agri.png" alt="hall" />
+                <img class="img-industry" src="/images/agri1.png" alt="hall" />
                 <article class="content d-flex align-items-end">
                   <h5>Agri</h5>
                 </article>
@@ -534,7 +543,7 @@
               <div class="card-home d-flex align-items-end">
                 <img
                   class="img-industry"
-                  src="/images/fashion.png"
+                  src="/images/fashion1.png"
                   alt="hall"
                 />
                 <article class="content d-flex align-items-end">
@@ -548,7 +557,7 @@
               <div class="card-home d-flex align-items-end">
                 <img
                   class="img-industry"
-                  src="/images/financial.png"
+                  src="/images/financial1.png"
                   alt="hall"
                 />
                 <article class="content d-flex align-items-end">
@@ -560,7 +569,7 @@
           <div class="col-lg-4 col-md-6 col-6 p-0 portfolio-item five">
             <a href="" class="industry-link">
               <div class="card-home d-flex align-items-end">
-                <img class="img-industry" src="/images/food.png" alt="hall" />
+                <img class="img-industry" src="/images/food1.png" alt="hall" />
                 <article class="content d-flex align-items-end">
                   <h5>Food Industry</h5>
                 </article>
@@ -572,7 +581,7 @@
               <div class="card-home d-flex align-items-end">
                 <img
                   class="img-industry"
-                  src="/images/education.png"
+                  src="/images/education1.png"
                   alt="hall"
                 />
                 <article class="content d-flex align-items-end">
@@ -586,7 +595,7 @@
               <div class="card-home d-flex align-items-end">
                 <img
                   class="img-industry"
-                  src="/images/automotive.png"
+                  src="/images/automation.png"
                   alt="hall"
                 />
                 <article class="content d-flex align-items-end">
@@ -600,7 +609,7 @@
               <div class="card-home d-flex align-items-end">
                 <img
                   class="img-industry"
-                  src="/images/environment.png"
+                  src="/images/eni.png"
                   alt="hall"
                 />
                 <article class="content d-flex align-items-end">
@@ -614,7 +623,7 @@
               <div class="card-home d-flex align-items-end">
                 <img
                   class="img-industry"
-                  src="/images/entrainement.png"
+                  src="/images/entertainment.png"
                   alt="hall"
                 />
                 <article class="content d-flex align-items-end">
@@ -627,7 +636,7 @@
       </div>
     </div>
     <!-- industry -->
-    <!-- Services -->
+    <!-- Services col-lg-4 col-md-6 col-6 -->
     <section class="container-fluid py-5 services">
       <h6 class="why-choose text-center text-uppercase mb-3">Our Services</h6>
       <h1 class="text-white text-center partner-desc mb-4">
@@ -637,93 +646,131 @@
       <div class="row">
         <div class="col-lg-4 col-md-6 col-6 mb-5">
           <a href="" class="links-services">
-            <div class="Card">
-              <img
-                src="images/digital&design.png"
-                alt="icon-1"
-                class="servies-icon"
-              />
-              <p class="services-para1">Digital Strategy & Design</p>
+            <div class="Card row">
+              <div class="col-md-3">
+                <img
+                  src="images/digital&design.png"
+                  alt="icon-1"
+                  class="servies-icon"
+                />
+              </div>
+              <div class="col-md-9">
+                <p class="services-para1">Digital Strategy & Design</p>
+              </div>
             </div>
           </a>
         </div>
         <div class="col-lg-4 col-md-6 col-6 mb-5">
           <a href="" class="links-services">
-            <div class="Card">
-              <img
-                src="images/enterprise.png"
-                alt="icon-1"
-                class="servies-icon"
-              />
-              <p class="services-para1">Enterprise Solution</p>
+            <div class="Card row">
+              <div class="col-md-3">
+                <img
+                  src="images/enterprise.png"
+                  alt="icon-1"
+                  class="servies-icon"
+                />
+              </div>
+              <div class="col-md-9">
+                <p class="services-para1">Enterprise Solution</p>
+              </div>
             </div>
           </a>
         </div>
         <div class="col-lg-4 col-md-6 col-6 mb-5">
           <a href="" class="links-services">
-            <div class="Card">
-              <img src="images/data.png" alt="icon-1" class="servies-icon" />
-              <p class="services-para1">Data & Analystics</p>
+            <div class="Card row">
+              <div class="col-md-3">
+                <img src="images/data.png" alt="icon-1" class="servies-icon" />
+              </div>
+              <div class="col-md-9">
+                <p class="services-para1">Data & Analystics</p>
+              </div>
             </div>
           </a>
         </div>
         <div class="col-lg-4 col-md-6 col-6 mb-5">
           <a href="" class="links-services">
-            <div class="Card">
-              <img src="images/cloud.png" alt="icon-1" class="servies-icon" />
-              <p class="services-para1">Cloud & Infrastructure</p>
+            <div class="Card row">
+              <div class="col-md-3">
+                <img src="images/cloud.png" alt="icon-1" class="servies-icon" />
+              </div>
+              <div class="col-md-9">
+                <p class="services-para1">Cloud & Infrastructure</p>
+              </div>
             </div>
           </a>
         </div>
         <div class="col-lg-4 col-md-6 col-6 mb-5">
           <a href="" class="links-services">
-            <div class="Card">
-              <img src="images/iot.png" alt="icon-1" class="servies-icon" />
-              <p class="services-para1">IOT & Digital engineering</p>
+            <div class="Card row">
+              <div class="col-md-3">
+                <img src="images/iot.png" alt="icon-1" class="servies-icon" />
+              </div>
+              <div class="col-md-9">
+                <p class="services-para1">IOT & Digital engineering</p>
+              </div>
             </div>
           </a>
         </div>
         <div class="col-lg-4 col-md-6 col-6 mb-5">
           <a href="" class="links-services">
-            <div class="Card">
-              <img
-                src="images/cyber-security.png"
-                alt="icon-1"
-                class="servies-icon"
-              />
-              <p class="services-para1">Cybersecurity</p>
+            <div class="Card row">
+              <div class="col-md-3">
+                <img
+                  src="images/cyber-security.png"
+                  alt="icon-1"
+                  class="servies-icon"
+                />
+              </div>
+              <div class="col-md-9">
+                <p class="services-para1">Cybersecurity</p>
+              </div>
             </div>
           </a>
         </div>
         <div class="col-lg-4 col-md-6 col-6 mb-5">
           <a href="" class="links-services">
-            <div class="Card">
-              <img
-                src="images/intelligence.png"
-                alt="icon-1"
-                class="servies-icon"
-              />
-              <p class="services-para1">Intelligent Automation</p>
+            <div class="Card row">
+              <div class="col-md-3">
+                <img
+                  src="images/intelligence.png"
+                  alt="icon-1"
+                  class="servies-icon"
+                />
+              </div>
+              <div class="col-md-9">
+                <p class="services-para1">Intelligent Automation</p>
+              </div>
             </div>
           </a>
         </div>
         <div class="col-lg-4 col-md-6 col-6 mb-5">
           <a href="" class="links-services">
-            <div class="Card">
-              <img
-                src="images/application.png"
-                alt="icon-1"
-                class="servies-icon"
-              />
-              <p class="services-para1">Application Development & Management</p>
+            <div class="Card row">
+              <div class="col-md-3">
+                <img
+                  src="images/application.png"
+                  alt="icon-1"
+                  class="servies-icon"
+                />
+              </div>
+              <div class="col-md-9">
+                <p class="services-para1">
+                  Application Development & Management
+                </p>
+              </div>
             </div>
           </a>
         </div>
         <div class="col-lg-4 col-md-6 col-12 mb-5">
           <a href="" class="links-services">
-            <div class="Card">
-              <img src="images/cx.png" alt="icon-1" class="servies-icon" />
-              <p class="services-para1">CX Transformation</p>
+            <div class="Card row">
+              <div class="col-md-3">
+                <img src="images/cx.png" alt="icon-1" class="servies-icon" />
+              </div>
+              <div class="col-md-9">
+                <p class="services-para1">CX Transformation</p>
+              </div>
             </div>
           </a>
         </div>
@@ -735,105 +782,190 @@
 
     <section class="insights-main container-fluid">
       <h6 class="why-choose text-center text-uppercase mb-3">Insights</h6>
-      <h1 class="text-white text-center partner-desc mb-4">
+      <h1 class="text-center partner-desc mb-4">
         Lorem ipsum dolor sit amet, consectetur<br />
         adipiscing elit.
       </h1>
-      <div class="row">
-        <div class="col-lg-5 col-md-12">
-          <div class="insights-desc">
-            <h1 class="ont-weight-normal text-left">Lorem ipsum</h1>
-            <p class="insights-para">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
-              dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit
-              amet, consectetur adipiscing elit. dolor sit amet, consectetur
-              adipiscing elit. Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit.
-            </p>
-            <a href="" class="read-more">Read More..</a>
-          </div>
-        </div>
-        <div class="col-lg-7 col-md-12">
-          <div class="card-carousel">
-            <div class="carousel-container">
-              <div class="card active">
-                <a href="" class="cards-insights">
-                  <img
-                    class="card-img"
-                    src="images/Blog-Banner-BFSI-IoT.jpg"
-                    alt="Card image"
-                  />
-                  <div class="card-content">
-                    <h5 class="card-title">News</h5>
-                    <p class="card-text">This is the content of card 1.</p>
-                    <p class="card-text">may 10</p>
-                  </div>
-                </a>
-              </div>
+      <div class="site__wrapper">
+        <div class="grid">
+          <div class="card">
+            <div class="card__image">
+              <img src="images/blog.png" alt="" class="img" />
 
-              <div class="card">
-                <a href="" class="cards-insights">
-                  <img
-                    class="card-img"
-                    src="images/blog-banner-salesforce-governor-limit-disruptions-scaled.jpg"
-                    alt="Card image"
-                  />
-                  <div class="card-content">
-                    <h5 class="card-title">Blogs</h5>
-                    <p class="card-text">This is the content of card 2.</p>
-                    <p class="card-text">may 10</p>
-                  </div>
-                </a>
-              </div>
-              <div class="card">
-                <a href="" class="cards-insights">
-                  <img
-                    class="card-img"
-                    src="images/Banner-for-The-Data-Revolution-Whitepaper-scaled.jpg"
-                    alt="Card image"
-                  />
-                  <div class="card-content">
-                    <h5 class="card-title">whitePaper</h5>
-                    <p class="card-text">This is the content of card 3.</p>
-                    <p class="card-text">may 10</p>
-                  </div>
-                </a>
-              </div>
-              <div class="card">
-                <a href="" class="cards-insights">
-                  <img
-                    class="card-img"
-                    src="images/Blog-Banner-Zinnov-podcast.jpg"
-                    alt="Card image"
-                  />
-                  <div class="card-content">
-                    <h5 class="card-title">Award</h5>
-                    <p class="card-text">This is the content of card 3.</p>
-                    <p class="card-text">may 10</p>
-                  </div>
-                </a>
-              </div>
-              <div class="card">
-                <a href="" class="cards-insights">
-                  <img
-                    class="card-img"
-                    src="images/Whitepaper-Banner-for-Persistent-Customer-scaled-1.jpg"
-                    alt="Card image"
-                  />
-                  <div class="card-content">
-                    <h5 class="card-title">Newsletters</h5>
-                    <p class="card-text">This is the content of card 3.</p>
-                    <p class="card-text">may 10</p>
-                  </div>
-                </a>
+              <div class="card__overlay card__overlay--indigo">
+                <div class="card__overlay-content">
+                  <ul class="card__meta">
+                    <li>Blog</li>
+                    <!-- <li>
+                      <a href="#0"><i class="fa fa-clock-o"></i> 2 min ago</a>
+                    </li> -->
+                  </ul>
+
+                  <a href="#0" class="card__title"
+                    >How to create a card based article with HTML5 &amp; CSS3</a
+                  >
+
+                  <!-- <ul class="card__meta card__meta--last">
+                    <li>
+                      <a href="#0"><i class="fa fa-user"></i> Mithicher</a>
+                    </li>
+                    <li>
+                      <a href="#0"
+                        ><i class="fa fa-facebook-square"></i> Share</a
+                      >
+                    </li>
+                  </ul> -->
+                </div>
               </div>
             </div>
-            <button id="prevBtn" class="carousel-btn prev-btn">&#10094;</button>
-            <button id="nextBtn" class="carousel-btn next-btn">&#10095;</button>
           </div>
         </div>
+
+        <div class="grid">
+          <div class="card">
+            <div class="card__image">
+              <img src="images/news.png" alt="" class="img" />
+
+              <div class="card__overlay card__overlay--blue">
+                <div class="card__overlay-content">
+                  <ul class="card__meta">
+                    <li>News</li>
+                    <!-- <li>
+                      <a href="#0"><i class="fa fa-clock-o"></i> 2 days ago</a>
+                    </li> -->
+                  </ul>
+
+                  <a href="#0" class="card__title"
+                    >How to create a card based article with HTML5 &amp; CSS3</a
+                  >
+
+                  <!-- <ul class="card__meta card__meta--last">
+                    <li>
+                      <a href="#0"><i class="fa fa-user"></i> Mithicher</a>
+                    </li>
+                    <li>
+                      <a href="#0"
+                        ><i class="fa fa-facebook-square"></i> Share</a
+                      >
+                    </li>
+                  </ul> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="card">
+            <div class="card__image">
+              <img src="images/whitepaper.png" alt="" class="img" />
+
+              <div class="card__overlay card__overlay--indigo">
+                <div class="card__overlay-content">
+                  <ul class="card__meta">
+                    <li>Whitepaper</li>
+                    <!-- <li>
+                      <a href="#0"><i class="fa fa-clock-o"></i> 2 days ago</a>
+                    </li> -->
+                  </ul>
+
+                  <a href="#0" class="card__title"
+                    >How to create a card based article with HTML5 &amp; CSS3</a
+                  >
+
+                  <!-- <ul class="card__meta card__meta--last">
+                    <li>
+                      <a href="#0"><i class="fa fa-user"></i> Mithicher</a>
+                    </li>
+                    <li>
+                      <a href="#0"
+                        ><i class="fa fa-facebook-square"></i> Share</a
+                      >
+                    </li>
+                  </ul> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="card">
+            <div class="card__image">
+              <img src="images/podcast.png" alt="" class="img" />
+
+              <div class="card__overlay card__overlay--indigo">
+                <div class="card__overlay-content">
+                  <ul class="card__meta">
+                    <li>Podcast</li>
+                    <!-- <li>
+                      <a href="#0"><i class="fa fa-clock-o"></i> 2 days ago</a>
+                    </li> -->
+                  </ul>
+
+                  <a href="#0" class="card__title"
+                    >How to create a card based article with HTML5 &amp; CSS3</a
+                  >
+
+                  <!-- <ul class="card__meta card__meta--last">
+                    <li>
+                      <a href="#0"><i class="fa fa-user"></i> Mithicher</a>
+                    </li>
+                    <li>
+                      <a href="#0"
+                        ><i class="fa fa-facebook-square"></i> Share</a
+                      >
+                    </li>
+                  </ul> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="card">
+            <div class="card__image">
+              <img src="images/newletter.png" alt="" class="img" />
+
+              <div class="card__overlay card__overlay--blue">
+                <div class="card__overlay-content">
+                  <ul class="card__meta">
+                    <li>Newsletters</li>
+                    <!-- <li>
+                      <a href="#0"><i class="fa fa-clock-o"></i> 2 days ago</a>
+                    </li> -->
+                  </ul>
+
+                  <a href="#0" class="card__title"
+                    >How to create a card based article with HTML5 &amp; CSS3</a
+                  >
+
+                  <!-- <ul class="card__meta card__meta--last">
+                    <li>
+                      <a href="#0"><i class="fa fa-user"></i> Mithicher</a>
+                    </li>
+                    <li>
+                      <a href="#0"
+                        ><i class="fa fa-facebook-square"></i> Share</a
+                      >
+                    </li>
+                  </ul> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="view row">
+          <a
+            class="view-more"
+            href="https://en.wikipedia.org/wiki/Jellyfish"
+            target="_blank"
+            >View More</a
+          >
+        </div>
       </div>
+      <!-- @end site__wrapper -->
     </section>
 
     <!-- insights -->
@@ -1319,45 +1451,109 @@
         }
       });
       // insights
-      const carousel = document.querySelector(".card-carousel");
-      const container = carousel.querySelector(".carousel-container");
-      const cards = Array.from(container.querySelectorAll(".card"));
-      const prevBtn = document.getElementById("prevBtn");
-      const nextBtn = document.getElementById("nextBtn");
-      let currentIndex = 0;
+      // const carousel = document.querySelector(".card-carousel");
+      // const container = carousel.querySelector(".carousel-container");
+      // const cards = Array.from(container.querySelectorAll(".card"));
+      // const prevBtn = document.getElementById("prevBtn");
+      // const nextBtn = document.getElementById("nextBtn");
+      // let currentIndex = 0;
 
-      function showCard(index) {
-        container.style.transform = `translateX(-${index * 320}px)`;
+      // function showCard(index) {
+      //   container.style.transform = `translateX(-${index * 320}px)`;
 
-        cards.forEach((card, idx) => {
-          if (idx === index) {
-            card.classList.add("active");
-          } else {
-            card.classList.remove("active");
-          }
+      //   cards.forEach((card, idx) => {
+      //     if (idx === index) {
+      //       card.classList.add("active");
+      //     } else {
+      //       card.classList.remove("active");
+      //     }
+      //   });
+      // }
+
+      // function prevCard() {
+      //   currentIndex--;
+      //   if (currentIndex < 0) {
+      //     currentIndex = cards.length - 1;
+      //   }
+      //   showCard(currentIndex);
+      // }
+
+      // function nextCard() {
+      //   currentIndex++;
+      //   if (currentIndex >= cards.length) {
+      //     currentIndex = 0;
+      //   }
+      //   showCard(currentIndex);
+      // }
+
+      // prevBtn.addEventListener("click", prevCard);
+      // nextBtn.addEventListener("click", nextCard);
+
+      // showCard(currentIndex);
+
+      // main banner
+      window.addEventListener("load", function () {
+        var divElement = document.querySelector("#main-banner-section > div");
+        divElement.classList.add("fade-left");
+      });
+      window.addEventListener("load", function () {
+        var swiperSlides = document.querySelectorAll(".swiper-slide");
+        swiperSlides.forEach(function (slide) {
+          slide.classList.add("fade-right");
         });
-      }
+      });
 
-      function prevCard() {
-        currentIndex--;
-        if (currentIndex < 0) {
-          currentIndex = cards.length - 1;
+      // main banner
+
+      // fadeup for about us
+      window.addEventListener("scroll", function () {
+        var section = document.getElementById("our-company-section");
+        var sectionTop = section.getBoundingClientRect().top;
+
+        var isVisible = sectionTop - window.innerHeight < 0;
+        if (isVisible) {
+          section.classList.add("fade-up");
+        } else {
+          section.classList.remove("fade-up");
         }
-        showCard(currentIndex);
-      }
+      });
 
-      function nextCard() {
-        currentIndex++;
-        if (currentIndex >= cards.length) {
-          currentIndex = 0;
+      window.addEventListener("scroll", function () {
+        var leftColumn = document.getElementById("left-column");
+        var rightColumn = document.getElementById("right-column");
+
+        var leftColumnTop = leftColumn.getBoundingClientRect().top;
+        var rightColumnTop = rightColumn.getBoundingClientRect().top;
+
+        var isVisibleLeft = leftColumnTop - window.innerHeight < 0;
+        var isVisibleRight = rightColumnTop - window.innerHeight < 0;
+
+        if (isVisibleLeft) {
+          leftColumn.classList.add("fade-left");
+        } else {
+          leftColumn.classList.remove("fade-left");
         }
-        showCard(currentIndex);
-      }
 
-      prevBtn.addEventListener("click", prevCard);
-      nextBtn.addEventListener("click", nextCard);
+        if (isVisibleRight) {
+          rightColumn.classList.add("fade-right");
+        } else {
+          rightColumn.classList.remove("fade-right");
+        }
+      });
 
-      showCard(currentIndex);
+      // fadeup for about us
+      // our product
+
+      window.addEventListener("scroll", function () {
+        var partners = document.querySelector(".Partners");
+        var position = partners.getBoundingClientRect().top;
+        var windowHeight = window.innerHeight;
+
+        if (position < windowHeight * 0.8) {
+          partners.classList.add("fade-up");
+        }
+      });
+      // our product
     </script>
   </body>
 </html>
