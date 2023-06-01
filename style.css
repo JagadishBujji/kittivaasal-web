@@ -47,6 +47,10 @@ body {
   color: #fff;
   /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
 }
+.navbar-nav .nav-item .nav-link:focus {
+  color: #fff;
+  /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
+}
 
 .navbar-nav .nav-item .contact-link {
   background-color: #005baa;
@@ -55,12 +59,12 @@ body {
   border-radius: 10px;
   font-weight: 900;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  padding: 15px 10px;
+  /* padding: 15px 10px; */
 }
 
 .dropdown {
   position: relative;
-  display: contents;
+  display: inline-block;
 }
 
 .dropdown-toggle {
@@ -79,15 +83,58 @@ body {
 
 .dropdown-menu {
   position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
+  top: 150%;
+  /* left: auto; */
+  /* width: 100%; */
   padding: 20px;
   border: none;
   border-bottom: 1px solid #000;
   background: #0d2f51;
   display: none;
-  padding: 40px 0;
+  padding: 0;
+}
+
+.dropbtn {
+  /* background-color: #fff; */
+  color: #fff;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown1 {
+  position: relative;
+  /* display: inline-block; */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: -100%;
+  background-color: #f1f1f1;
+  min-width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown1:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown1:hover .dropbtn {
+  background-color: #fff;
 }
 
 /* navbar */
@@ -586,22 +633,23 @@ main > div > a:hover {
 }
 
 /* Element styles */
-.marquee svg {
+.clients {
   display: grid;
   place-items: center;
-  width: 10%;
-  fill: #00ca4a;
+  /* width: 10%; */
+  /* fill: #00ca4a; */
   background: #ffffff17;
-  aspect-ratio: 26/10;
-  padding: calc(var(--size) / 30);
+  aspect-ratio: 2/0.9;
+  padding: calc(var(--size) / 67);
+  width: calc(var(--size) / 0.9);
   border-radius: 0.5rem;
 }
 
-.marquee--vertical svg {
-  aspect-ratio: 1;
+/* {
+  aspect-ratio: 1.2;
   width: calc(var(--size) / 1.5);
-  padding: calc(var(--size) / 6);
-}
+  padding: calc(var(--size) / 30);
+} */
 
 /* Parent wrapper */
 .wrapper {

@@ -107,10 +107,10 @@
               class="dropdown-menu animated fadeIn"
               aria-labelledby="navbarDropdown1"
             >
-              <a class="dropdown-item" href="#">About us</a>
-              <a class="dropdown-item" href="#">Mission & Vision</a>
+              <a class="dropdown-item" href="aboutus.html">About us</a>
+              <!-- <a class="dropdown-item" href="#">Mission & Vision</a> -->
               <a class="dropdown-item" href="leadership.html">Leadership</a>
-              <a class="dropdown-item" href="#">Milestone Award</a>
+              <!-- <a class="dropdown-item" href="#">Milestone Award</a> -->
               <a class="dropdown-item" href="#"
                 >Corporate Social Responsibility</a
               >
@@ -161,7 +161,7 @@
           </li>
           <li class="nav-item dropdown">
             <a
-              class="nav-link dropdown-toggle"
+              class="nav-link"
               href="#"
               id="navbarDropdown4"
               role="button"
@@ -171,7 +171,7 @@
             >
               Insights
             </a>
-            <div
+            <!-- <div
               class="dropdown-menu animated fadeIn"
               aria-labelledby="navbarDropdown4"
             >
@@ -181,7 +181,7 @@
               <a class="dropdown-item" href="#">Customer Stories</a>
               <a class="dropdown-item" href="#">Podcast</a>
               <a class="dropdown-item" href="#">Videos</a>
-            </div>
+            </div> -->
           </li>
           <li class="nav-item">
             <a class="nav-link contact-link" href="#">Contact</a>
@@ -195,9 +195,13 @@
     <!-- banner -->
 
     <div class="banner">
-      <div class="banner-content">
+      <div class="banner-content1">
         <h1>Leadership</h1>
         <h5>Committed to creating meaningful change</h5>
+      </div>
+      <div class="banner-content">
+        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+        <h5>consectetur adipiscing elit.</h5>
       </div>
     </div>
 
@@ -993,6 +997,28 @@
         };
       };
       // our team
+      function isElementInViewport(element) {
+        var rect = element.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <=
+            (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <=
+            (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
+
+      function fadeInOnScroll() {
+        var cards = document.querySelectorAll(".card");
+        cards.forEach(function (card) {
+          if (isElementInViewport(card)) {
+            card.classList.add("fade-in");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", fadeInOnScroll);
     </script>
   </body>
 </html>
